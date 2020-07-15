@@ -2,7 +2,7 @@ service: serverless-nestjs
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
 
 plugins:
   - serverless-offline
@@ -20,11 +20,11 @@ functions:
   index:
     handler: dist/index.handler
     events:
-    - http:
-        cors: true
-        path: '/'
-        method: any
-    - http:
-        cors: true
-        path: '{proxy+}'
-        method: any
+      - http:
+          cors: true
+          path: '/'
+          method: any
+      - http:
+          cors: true
+          path: '{proxy+}'
+          method: any
