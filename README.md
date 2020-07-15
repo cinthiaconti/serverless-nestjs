@@ -1,21 +1,16 @@
 # serverless-nestjs
 
-This is an example of creating a function that runs as nestjs using the serverless framework.
-Sample publish. https://mmjdx4zxmc.execute-api.ap-northeast-1.amazonaws.com/dev/
-
-## What is changed.
-
-### add
-
-- `src/index.ts`
-- `src/swagger.ts`
-- `serverless.yml`
-
-### change
-
-- `package.json`
-
 ## How to use
+
+### Cloud provider credential
+
+Create the file .aws/credentials in your user root directory with the following content:
+
+```
+[default]
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+```
 
 ### Prepare
 
@@ -105,3 +100,6 @@ custom:
       - production
       - staging
 ```
+
+Resources:
+https://blog.theodo.com/2019/06/deploy-a-nestjs-app-in-5-minutes-with-serverless-framework/
